@@ -31,7 +31,7 @@ $format = "<xml><ToUserName><![CDATA[toUser]]></ToUserName><Encrypt><![CDATA[%s]
 $from_xml = sprintf($format, $encrypt);
 
 // 第三方收到公众号平台发送的消息
-$msg = '';
+$msg = 'success!';
 $errCode = $pc->decryptMsg($msg_sign, $timeStamp, $nonce, $from_xml, $msg);
 if ($errCode == 0) {
 	print("解密后: " . $msg . "\n");
